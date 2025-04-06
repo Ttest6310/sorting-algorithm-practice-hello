@@ -1,3 +1,8 @@
 def bubble_sort(arr: list) -> list:
-    # 错误实现：未完成排序逻辑
-    return arr  # 直接返回原数组，未排序
+    # 正确实现冒泡排序
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+    return arr
